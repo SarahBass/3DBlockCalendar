@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js';
-import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/OBJLoader.js';
+import * as THREE from './libs/three.module.js';
+import { OBJLoader } from './libs/OBJLoader.js';
 
 // Set up scene, camera, and renderer
 const scene = new THREE.Scene();
