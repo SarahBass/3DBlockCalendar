@@ -35,4 +35,26 @@ loader.load(
   (object) => {
     object.traverse((child) => {
       if (child instanceof THREE.Mesh) {
-        child.material = new THREE.MeshStandard
+        child.material = new THREE.MeshStandardMaterial({
+          color: 0x6699ff,
+          roughness: 0.5,
+          metalness: 0.1
+        });
+      }
+    });
+
+    object.position.set(0, 0, 0);
+    scene.add(object);
+  },
+  undefined,
+  (err) => {
+    console.error('Could not load model:', err);
+  }
+);
+
+// Render loop
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
