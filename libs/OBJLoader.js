@@ -14,7 +14,7 @@ import {
 	Vector3,
 	Color,
 	SRGBColorSpace
-} from 'three';
+} from './three.module.js'; // 👈 LOCAL path
 
 // o object_name | g group_name
 const _object_pattern = /^[og]\s*(.+)?/;
